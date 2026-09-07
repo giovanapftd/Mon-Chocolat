@@ -7,7 +7,12 @@
 
 @font-face {
     font-family: Montserrat;
-    src: url(fonts/Montserrat-VariableFont_wght.ttf) format(truetype);
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Valley;
+    src: url(fonts/ValleySans-VariableFont_wght.ttf) format(truetype);
 }
 
 :root {
@@ -17,7 +22,8 @@
     --branco: #fffdfc;
 
     --fonte-titulo: "Michland", cursive;
-    --fonte-corpo: "Montserrat", sans-serif;
+    --fonte-corpo: "Valley", sans-serif;
+    --font-nav: "Montserrat", sans-serif;
     --teste: "Teste", sans-serif;
 }
 
@@ -25,6 +31,10 @@
     margin: 0;
     padding: 0;
 }
+
+
+
+
 
 /* Barra de Navegação */
 .navbar {
@@ -45,10 +55,6 @@ img.logotipo {
     border-radius: 50%;
 }
 
-img.logotipo:hover{
-    anim
-}
-
 .navbar-item {
     display: inline-flex;
     align-items: center;
@@ -59,13 +65,13 @@ img.logotipo:hover{
 }
 
 .navbar-link {
-    font-family: var(--fonte-corpo);
-    font-weight: 500;
+    font-family: var(--fonte-nav);
+    font-weight: 400;
 
     text-decoration: none;
     color: var(--branco);
 
-    margin-right: 1.5rem;
+    margin-right: 1.8rem;
 }
 
 .navbar-link:hover {
@@ -90,22 +96,107 @@ img.logotipo:hover{
     width: 100%;
 }
 
-/* Fundo Principal */
-.fundo-principal::before {
+
+
+
+
+/* Banner Principal */
+#fundo-principal::after {
     content: "";
-    background-color: #3e29256d;
+    background-color: #3e292594;
 
     position: absolute;
     inset: 0;
 }
 
-.fundo-principal {
-    background-image: url(img/Fundo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    position: relative;
-
-    width: 100%;
+#fundo-principal {
     height: 100vh;
+}
+
+.carousel, .carousel-inner, .carousel-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 2.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+/* Texto Principal */
+.texto-principal{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.texto-principal h1, .texto-principal p, .frase-final, .linha-fina {
+    opacity: 0;
+
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.texto-principal h1, .texto-principal p, .frase-final, .linha-fina {
+    &.visivel {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+.texto-principal h1{
+    font-family: var(--fonte-titulo);
+    font-size: 7rem;
+
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    
+    color: var(--rosa);
+    line-height: 1;
+
+    margin-bottom: 0.3rem;
+}
+
+.texto-principal p{
+    font-family: var(--fonte-corpo);
+    font-size: 1.2rem;
+
+    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+
+    color: var(--branco);
+
+    margin-bottom: 0.4rem;
+}
+
+.texto-principal .frase-final{
+    font-size: 0.98rem;
+    font-weight: 500;
+
+    color: var(--rosa);
+    letter-spacing: 0.2em;
+
+    margin-top: 0.8rem;
+}
+
+.linha-fina{
+    background-color: var(--rosa);
+
+    width: 30%;
+    height: 1px;
+
+    margin-inline: auto;
+    margin-top: 0.5rem;
 }
