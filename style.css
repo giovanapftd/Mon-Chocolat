@@ -11,20 +11,20 @@
 }
 
 @font-face {
-    font-family: Valley;
-    src: url(fonts/ValleySans-VariableFont_wght.ttf) format(truetype);
+    font-family: Damion;
+    src: url(fonts/Damion-Regular.ttf) format(truetype);
 }
 
 :root {
     --cor-fundo: #f7eee8;
     --marrom-escuro: #3e2925;
-    --rosa: #b97983;
+    --rosa: #db8e9a;
+    --bege: #fff2e4;
     --branco: #fffdfc;
 
     --fonte-titulo: "Michland", cursive;
-    --fonte-corpo: "Valley", sans-serif;
-    --font-nav: "Montserrat", sans-serif;
-    --teste: "Teste", sans-serif;
+    --font-titulo-diverso: "Damion", cursive;
+    --font-corpo: "Montserrat", sans-serif;
 }
 
 * {
@@ -37,7 +37,7 @@
 
 
 /* Barra de Navegação */
-.navbar {
+.navbar{
     background-color: var(--marrom-escuro);
 
     border-bottom: 2px solid var(--rosa);
@@ -47,7 +47,7 @@
     justify-content: center;
 }
 
-img.logotipo {
+img.logotipo{
     width: 3.5rem;
     height: 3.5rem;
 
@@ -55,7 +55,7 @@ img.logotipo {
     border-radius: 50%;
 }
 
-.navbar-item {
+.navbar-item{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -64,17 +64,17 @@ img.logotipo {
     margin-right: 1rem;
 }
 
-.navbar-link {
-    font-family: var(--fonte-nav);
+.navbar-link{
+    font-family: var(--fonte-corpo);
     font-weight: 400;
 
     text-decoration: none;
     color: var(--branco);
 
-    margin-right: 1.8rem;
+    margin-right: 1.5rem;
 }
 
-.navbar-link:hover {
+.navbar-link:hover{
     color: var(--rosa);
 
     transition: 0.3s;
@@ -92,7 +92,7 @@ img.logotipo {
     transition: width 0.3s ease;
 }
 
-.navbar-link:hover::after {
+.navbar-link:hover::after{
     width: 100%;
 }
 
@@ -101,7 +101,7 @@ img.logotipo {
 
 
 /* Banner Principal */
-#carouselBanner::after {
+#carouselBanner::after{
     content: "";
     background-color: #3e292594;
 
@@ -109,17 +109,17 @@ img.logotipo {
     inset: 0;
 }
 
-.carousel {
+.carousel{
     width: 100%;
     height: 100vh;
 }
 
-.carousel-inner {
+.carousel-inner{
     width: 100%;
     height: 100%;
 }
 
-.carousel-item {
+.carousel-item{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -130,20 +130,21 @@ img.logotipo {
     transition: transform 2.5s ease-in-out;
 }
 
-.carousel-item img {
+.carousel-item img{
     display: none;
 }
 
 .carousel-item:nth-child(1) { background-image: url('../img/Cookie.png'); }
 .carousel-item:nth-child(2) { background-image: url('../img/Brownie.png'); }
 .carousel-item:nth-child(3) { background-image: url('../img/RedVelvt.png'); }
+.carousel-item:nth-child(4) { background-image: url('../img/Donuts.png'); }
 
 
 
 
 
 /* Texto Principal */
-.texto-principal{
+#texto-principal{
     position: absolute;
 
     top: 50%;
@@ -154,14 +155,14 @@ img.logotipo {
     text-align: center;
 }
 
-.texto-principal h1, .texto-principal p, .frase-final, .linha-fina {
+#texto-principal h1, #texto-principal p, .frase-final, .linha-fina {
     opacity: 0;
 
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
 }
 
-.texto-principal h1, .texto-principal p, .frase-final, .linha-fina {
+#texto-principal h1, #texto-principal p, .frase-final, .linha-fina {
     &.visivel {
         opacity: 1;
 
@@ -169,7 +170,7 @@ img.logotipo {
     }
 }
 
-.texto-principal h1{
+#texto-principal h1{
     font-family: var(--fonte-titulo);
     font-size: 7rem;
 
@@ -181,7 +182,7 @@ img.logotipo {
     margin-bottom: 0.3rem;
 }
 
-.texto-principal p{
+#texto-principal p{
     font-family: var(--fonte-corpo);
     font-size: 1.2rem;
 
@@ -192,7 +193,7 @@ img.logotipo {
     margin-bottom: 0.4rem;
 }
 
-.texto-principal .frase-final{
+#texto-principal .frase-final{
     font-size: 0.98rem;
     font-weight: 500;
 
@@ -210,4 +211,217 @@ img.logotipo {
 
     margin-inline: auto;
     margin-top: 0.5rem;
+}
+
+
+
+
+
+/* Sobre Nossos Produtos */
+#sobre{
+    background-color: var(--bege);
+
+    padding: 5rem 0rem 5rem 0rem;
+}
+
+#sobre-produtos{
+    font-family: var(--fonte-corpo);
+
+    max-width: 1300px;
+
+    color: var(--marrom-escuro);
+    text-align: center;
+}
+
+div#sobre-produtos{
+    background-color: var(--branco);
+    border-radius: 16px;
+    box-shadow: 5px 10px 10px rgba(62, 41, 37, 0.204);
+
+    border-top: 5px solid var(--rosa);
+
+    padding: 3rem 3.5rem;
+    margin-left: 7rem;
+}
+
+#sobre-produtos h1{
+    font-family: var(--font-titulo-diverso);
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 500;
+
+    text-align: center;
+    color: var(--marrom-escuro);
+
+    margin-bottom: 1.8rem;
+}
+
+#sobre-produtos h1::after{
+    content: "";
+
+    background-color: var(--rosa);
+
+    display: block;
+
+    width: 10rem;
+    height: 3px;
+
+    margin: 0.6rem auto 0;
+}
+
+#sobre-produtos p{
+    font-size: 1.2rem;
+
+    margin-bottom: 1rem;
+}
+
+.marcado-rosa{
+    font-style: italic;
+    font-weight: 700;
+
+    color: var(--rosa);
+}
+
+.marcado-enfase{
+    font-style: italic;
+    font-weight: 800;
+}
+
+
+
+#cards-icones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+    margin-top: 1.5rem;
+}
+
+.cards-icones{
+    width: 12rem;
+    height: 12rem;
+
+    position: relative;
+    perspective: 800px;
+    cursor: pointer;
+}
+
+.card-frente{
+    background: linear-gradient(135deg, #f3dbc3, #d4a882);
+    border-radius: 15px;
+    border: 3px solid var(--rosa);
+    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.525);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    inset: 0;
+
+    backface-visibility: hidden;
+    transition: transform 0.8s ease;
+}
+
+.card-verso{
+    font-family: var(--fonte-corpo);
+    font-weight: 600;
+    font-size: 1rem;
+    
+    background: linear-gradient(135deg, #f3dbc3, #d4a882);
+    border-radius: 15px;
+    border: 3px solid var(--rosa);
+    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.525);
+
+    color: var(--branco);
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    inset: 0;
+
+    padding: 1rem;
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: transform 0.8s ease;
+}
+
+.cards-icones:hover .card-frente{
+    transform: rotateY(180deg);
+}
+
+.cards-icones:hover .card-verso{
+    transform: rotateY(0deg);
+}
+
+img.icone{
+    width: 8rem;
+    height: auto;
+}
+
+
+
+
+
+/* Cartaz */
+#cartaz{
+    background-image: url('../img/Cartaz.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    border-top: 3px solid var(--rosa);
+    border-bottom: 3px solid var(--rosa);
+
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+
+/* Favoritos */
+#favoritos{
+    background-color: var(--bege);
+}
+
+#favoritos h1{
+    font-family: var(--font-titulo-diverso);
+    font-size: 4rem;
+    font-weight: 500;
+
+    color: var(--marrom-escuro);
+    text-align: center;
+
+    padding-top: 3rem;
+}
+
+#favoritos h1::after{
+    content: "";
+
+    background-color: var(--rosa);
+
+    display: block;
+
+    width: 10rem;
+    height: 3px;
+
+    margin: 0.6rem auto 1rem;
+}
+
+#favoritos p{
+    font-family: var(--font-corpo);
+    font-size: 1.2rem;
+    font-style: italic;
+
+    color: var(--rosa);
+    text-align: center;
+
+    margin-bottom: 2rem;
 }
