@@ -149,7 +149,7 @@ img.logotipo{
 
 .carousel-item:nth-child(1) { background-image: url('../img/Cookie.png'); }
 .carousel-item:nth-child(2) { background-image: url('../img/Brownie.png'); }
-.carousel-item:nth-child(3) { background-image: url('../img/RedVelvt.png'); }
+.carousel-item:nth-child(3) { background-image: url('../img/Bolo.png'); }
 .carousel-item:nth-child(4) { background-image: url('../img/Donuts.png'); }
 
 
@@ -230,72 +230,51 @@ img.logotipo{
 /* Sobre Nossos Produtos */
 #sobre{
     background-color: var(--bege);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 5rem 2rem;
+    padding: 5rem 1.25rem;
 }
 
 #sobre-produtos{
-    font-family: var(--font-corpo);
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 3.5rem;
 
+    background-color: var(--branco);
+    border: 1px solid #eadbd3;
+    border-radius: 24px;
+    box-shadow: 0 12px 36px rgba(62, 41, 37, 0.06);
+
+    font-family: var(--font-corpo);
     color: var(--marrom-escuro);
     text-align: center;
-
-    display: block;
-    justify-content:center;
-    align-items: center;
-
-    max-width: 1300px;
-}
-
-div#sobre-produtos{
-    background-color: var(--branco);
-    border-radius: 16px;
-    box-shadow: 5px 10px 10px rgba(62, 41, 37, 0.204);
-    border-top: 5px solid var(--rosa);
-
-    padding: 3rem 3.5rem;
-    margin-inline: auto;
 }
 
 #sobre-produtos h1{
     font-family: var(--font-titulo-diverso);
-    font-size: 4rem;
-    font-style: italic;
+    font-size: clamp(2.4rem, 5vw, 4rem);
     font-weight: 500;
-
-    text-align: center;
-    color: var(--marrom-escuro);
-
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
 #sobre-produtos h1::after{
     content: "";
-
-    background-color: var(--rosa);
-
     display: block;
-
-    width: 10rem;
-    height: 3px;
-
-    margin: 0.6rem auto 0;
+    width: 4rem;
+    height: 2px;
+    margin: 1rem auto 0;
+    background-color: var(--rosa);
 }
 
-#sobre-produtos p{
-    font-size: 1.2rem;
-
-    margin-bottom: 1rem;
+#sobre-produtos > p{
+    max-width: 850px;
+    margin: 0 auto 1rem;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #705952;
 }
 
 .marcado-rosa{
     font-style: italic;
-    font-weight: 700;
-
     color: var(--rosa);
 }
 
@@ -304,90 +283,101 @@ div#sobre-produtos{
     font-weight: 800;
 }
 
-
-
 #cards-icones{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 3rem;
-
-    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 3rem;
 }
 
 .cards-icones{
-    width: 12rem;
-    height: 12rem;
-
+    height: 14rem;
     position: relative;
-
     perspective: 800px;
+    border-radius: 18px;
     cursor: pointer;
 }
 
-.card-frente{
-    background: linear-gradient(135deg, #f3dbc3, #d4a882);
-    border-radius: 15px;
-    border: 3px solid var(--rosa);
-    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.525);
-
+.card-frente,
+.card-verso{
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    position: absolute;
-    inset: 0;
-
+    border: 1px solid #ecded6;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(62, 41, 37, 0.05);
     backface-visibility: hidden;
-
+    -webkit-backface-visibility: hidden;
     transition: transform 0.8s ease;
+}
+
+.card-frente{
+    background-color: #fcf7f3;
 }
 
 .card-verso{
-    font-family: var(--font-corpo);
-    font-weight: 600;
+    background-color: #f5e8e2;
+    border-color: #dfb8bd;
+    padding: 1.5rem;
     font-size: 1rem;
-
-    background: linear-gradient(135deg, #f3dbc3, #d4a882);
-    border-radius: 15px;
-    border: 3px solid var(--rosa);
-    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.525);
-
-    color: var(--branco);
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    inset: 0;
-
-    padding: 1rem;
-
-    backface-visibility: hidden;
-
-    transform: rotateY(180deg);
-    transition: transform 0.8s ease;
-}
-
-.cards-icones:hover .card-frente{
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--marrom-escuro);
     transform: rotateY(180deg);
 }
 
-.cards-icones:hover .card-verso{
+.card-verso p{
+    margin: 0;
+    font-size: inherit;
+}
+
+.cards-icones:hover .card-frente,
+.cards-icones:focus-visible .card-frente{
+    transform: rotateY(180deg);
+}
+
+.cards-icones:hover .card-verso,
+.cards-icones:focus-visible .card-verso{
     transform: rotateY(0deg);
 }
 
+.cards-icones:focus-visible{
+    outline: 2px solid var(--rosa);
+    outline-offset: 4px;
+}
+
+.card-frente::before{
+    content: "";
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: #f0e0d8;
+}
+
 img.icone{
-    width: 8rem;
+    position: relative;
+    width: 5rem;
     height: auto;
 }
 
+@media (max-width: 800px){
+    #sobre-produtos{ padding: 2.5rem 1.5rem; }
+    #cards-icones{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
+@media (max-width: 420px){
+    #sobre{ padding: 3rem 1rem; }
+    #cards-icones{ grid-template-columns: 1fr; }
+}
 
-
+@media (prefers-reduced-motion: reduce){
+    .card-frente, .card-verso{ transition: none; }
+}
 
 /* Cartaz */
 #cartaz{
@@ -464,6 +454,9 @@ img.icone{
 }
 
 
+
+
+
 /* Cards do Cardápio e dos Favoritos */
 .cards-cardapio{
     background-color: var(--branco);
@@ -473,6 +466,8 @@ img.icone{
     overflow: hidden;
     
     width: 17rem;
+    min-height: 65vh;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -480,6 +475,8 @@ img.icone{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     padding-bottom: 0.5rem;
+
+    margin-bottom: 3rem;
 }
 
 .cards-cardapio:hover{
@@ -490,11 +487,13 @@ img.icone{
 .cardapio-img{
     position: relative;
     overflow: hidden;
+    flex: 0 0 200px;
+    height: 200px;
 }
 
 .cardapio-img img{
     width: 100%;
-    height: 200px;
+    height: 100%;
 
     object-fit: cover;
 
@@ -507,7 +506,7 @@ img.icone{
     display: flex;
     flex-direction: column;
 
-    gap: 0.4rem;
+    gap: 0.2rem;
     flex: 1;
 
     padding: 1rem 1.2rem 1.4rem;
@@ -598,19 +597,29 @@ img.icone{
 }
 
 .footer-conteudo{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
+    gap: 2rem;
 
-    gap: 15rem;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
 
-    padding: 3rem 0;
+@media (max-width: 800px){
+    .footer-conteudo{
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
 }
 
 .footer-logotipo{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .footer-logotipo img{
@@ -635,6 +644,7 @@ img.icone{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -664,6 +674,7 @@ img.icone{
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
 
     margin-bottom: 0.8rem;
 }
@@ -680,6 +691,7 @@ img.icone{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .footer-redes p{
@@ -695,6 +707,7 @@ img.icone{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:center ;
 
     gap: 0.8rem;
 }
@@ -797,12 +810,14 @@ img.icone{
 
 
 
-/* Cardápio Cookies */
-#cookies{
+
+
+/* Cardápio*/
+#cookies, #brownies{
     background-color: var(--bege);
 }
 
-#cookies h1{
+#cookies h1, #brownies h1{
     font-family: var(--font-titulo-diverso);
     font-size: 3.5rem;
 
@@ -819,11 +834,21 @@ img.icone{
     align-items: center;
 }
 
-.cardapio-cookies{
+.cardapio-cookies, .cardapio-brownies{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    align-items: center;
+    grid-auto-rows: 1fr;
+    align-items: stretch;
     justify-content: center;
 
     gap: 1.8rem;
+}
+
+#cookies .cards-cardapio, #brownies .cards-cardapio{
+    min-height: 0;
+}
+
+#cookies .descricao-produto, #brownies .descricao-produto{
+    color: var(--rosa);
+    text-align: left;
 }
