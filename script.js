@@ -170,7 +170,7 @@ const produtos = {
         },
 
         {
-            titulo: "Brownie de Ninho com Nutella",
+            titulo: "Brownie de Ninho e Nutella",
             descricao: "Recheado com creme de leite Ninho com Nutella.",
             preco: "R$ 15,00",
             img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1789351756/Brownie_de_Ninho_com_Nutella_ldyci0.png"
@@ -233,6 +233,103 @@ const produtos = {
         }],
     
     donuts: [
+        {
+            titulo: "Donuts Glaceado",
+            descricao: "Donut macio e fofinho, coberto com uma camada de glacê açucarado.",
+            preco: "R$ 10,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103409/Imagem_do_Codex_22_de_set._de_2026_15_50_48_qjqnsq.png"
+        },
+
+        {
+            titulo: "Donuts com Granulado",
+            descricao: "Cobertura intensa de chocolate com granulado de chocolate.",
+            preco: "R$ 10,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103398/Imagem_do_Codex_22_de_set._de_2026_14_53_49_tlc3g5.png"
+        },
+
+        {
+            titulo: "Donuts com Chocolate Branco",
+            descricao: "Donut fofinho coberto por uma camada de chocolate branco.",
+            preco: "R$ 10,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103411/Imagem_do_Codex_22_de_set._de_2026_14_52_58_fyaaqg.png"
+        },
+
+        {
+            titulo: "Donuts de Ninho com Morango",
+            descricao: "Cobertura de ninho, pedaços de morango e um recheio irresistível.",
+            preco: "R$ 18,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103365/Imagem_do_Codex_22_de_set._de_2026_15_43_02_c8sx76.png"
+        },
+
+        {
+            titulo: "Donuts de Pistache",
+            descricao: "Coberto com creme de pistache e finalizado com pistaches crocantes.",
+            preco: "R$ 18,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103379/Imagem_do_Codex_22_de_set._de_2026_15_42_47_wlhdca.png"
+        },
+
+        {
+            titulo: "Donuts Tradicional",
+            descricao: "Cobertura rosa sabor morango, finalizada com granulados coloridos.",
+            preco: "R$ 12,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103411/Imagem_do_Codex_22_de_set._de_2026_14_55_06_chwnep.png"
+        },
+
+        {
+            titulo: "Donuts de Banoffee",
+            descricao: "Cobertura cremosa e suave, finalizada com um toque de cacau.",
+            preco: "R$ 12,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103360/Gemini_Generated_Image__rp9ylm.jpg"
+        },
+
+        {
+            titulo: "Donuts de Ouro Branco",
+            descricao: "Cobertura de chocolate branco com pedaços de bombom de chocolate.",
+            preco: "R$ 15,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103424/Imagem_do_Codex_22_de_set._de_2026_14_52_51_bljflk.png"
+        },
+
+        {
+            titulo: "Donuts de Oreo",
+            descricao: "Cobertura de chocolate com muitos pedaços de oreo.",
+            preco: "R$ 15,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103418/Imagem_do_Codex_22_de_set._de_2026_14_44_58_o2bxoh.png"
+        },
+
+        {
+            titulo: "Donuts de Ovomaltine",
+            descricao: "Chocolate ao leite com pedaços crocantes de ovomaltine.",
+            preco: "R$ 15,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103409/Imagem_do_Codex_22_de_set._de_2026_15_16_44_ixzctb.png"
+        },
+
+        {
+            titulo: "Donuts de Red Velvet",
+            descricao: "Massa vermelha macia, cobertura de chocolate branco e um delicioso toque de frutas vermelhas.",
+            preco: "R$ 18,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103377/Imagem_do_Codex_22_de_set._de_2026_14_59_38_bmqmgs.png"
+        },
+
+        {
+            titulo: "Donuts de Kinder Bueno",
+            descricao: "Chocolate branco cremoso, chocolate ao leite e um pedaço de kinder bueno",
+            preco: "R$ 18,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103381/Imagem_do_Codex_22_de_set._de_2026_15_32_34_trwyxw.png"
+        },
+
+        {
+            titulo: "Donuts com M&M's",
+            descricao: "Cobertura de chocolate  com confeitos de M&M's.",
+            preco: "R$ 12,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103410/Imagem_do_Codex_22_de_set._de_2026_14_56_52_vk5dtu.png"
+        },
+
+        {
+            titulo: "Donuts de Caramelo",
+            descricao: "Chocolate, caramelo cremoso e pedaços crocantes.",
+            preco: "R$ 15,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103413/Imagem_do_Codex_22_de_set._de_2026_15_14_27_p8tteu.png"
+        },
         
     ],
     

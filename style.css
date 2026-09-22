@@ -813,11 +813,11 @@ img.icone{
 
 
 /* Cardápio*/
-#cookies, #brownies{
+#cookies, #brownies, #donuts{
     background-color: var(--bege);
 }
 
-#cookies h1, #brownies h1{
+#cookies h1, #brownies h1, #donuts h1{
     font-family: var(--font-titulo-diverso);
     font-size: 3.5rem;
 
@@ -834,7 +834,7 @@ img.icone{
     align-items: center;
 }
 
-.cardapio-cookies, .cardapio-brownies{
+.cardapio-cookies, .cardapio-brownies, .cardapio-donuts{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 1fr;
@@ -844,11 +844,11 @@ img.icone{
     gap: 1.8rem;
 }
 
-#cookies .cards-cardapio, #brownies .cards-cardapio{
+#cookies .cards-cardapio, #brownies .cards-cardapio, #donuts .cards-cardapio{
     min-height: 0;
 }
 
-#cookies .descricao-produto, #brownies .descricao-produto{
+#cookies .descricao-produto, #brownies .descricao-produto, #donuts .descricao-produto{
     color: var(--rosa);
     text-align: left;
 }
