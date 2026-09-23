@@ -213,7 +213,7 @@ const produtos = {
 
         {
             titulo: "Brownie com Ninho com Oreo",
-            descricao: "Recheio e leite Ninho com pedaços crocantes de Oreo.",
+            descricao: "Recheio de leite Ninho com pedaços crocantes de Oreo.",
             preco: "R$ 18,00",
             img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941223/Imagem_do_Codex_20_de_set._de_2026_18_12_12_tvk9fl.png"
         },
@@ -252,6 +252,13 @@ const produtos = {
             descricao: "Donut fofinho coberto por uma camada de chocolate branco.",
             preco: "R$ 10,00",
             img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103411/Imagem_do_Codex_22_de_set._de_2026_14_52_58_fyaaqg.png"
+        },
+
+        {
+            titulo: "Donuts de Morango",
+            descricao: "Macio, leve e coberto com uma cobertura de morango.",
+            preco: "R$ 15,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1789351749/Donuts_de_Morango_gktf9e.png"
         },
 
         {
@@ -334,7 +341,96 @@ const produtos = {
     ],
     
     bolos: [
-        
+        {
+            titulo: "Bolo de Chocolate",
+            descricao: "Massa de chocolate macia, com cobertura de chocolate ao leite e raspas de chocolate.",
+            preco: "R$ 20,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195887/Imagem_do_Codex_23_de_set._de_2026_17_33_25_jkeobk.png"
+        },
+
+        {
+            titulo: "Bolo de Chocolate com Morango",
+            descricao: "Massa de chocolate com pedaços de morango, cobertura de chocolate ao leite e raspas de chocolate.",
+            preco: "R$ 22,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195888/Imagem_do_Codex_23_de_set._de_2026_17_33_32_cksgzu.png"
+        },
+
+        {
+            titulo: "Bolo de Chocolate Branco com Morango",
+            descricao: "Massa branca com pedaços de morango, cobertura de chocolate branco e lascas de chocolate branco.",
+            preco: "R$ 22,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195885/Imagem_do_Codex_23_de_set._de_2026_17_35_13_tjnghi.png"
+        },
+
+        {
+            titulo: "Bolo de Maçã com Canela",
+            descricao: "Massa com pedaços de maçã e canela, finalizada com cobertura, maçãs caramelizadas e um toque de canela.",
+            preco: "R$ 25,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195887/Imagem_do_Codex_23_de_set._de_2026_17_34_43_zdpzud.png"
+        },
+
+        {
+            titulo: "Bolo de Mirtilo",
+            descricao: "Aveludado, fofinho e com cobertura de chocolate branco.",
+            preco: "R$ 25,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1789351752/Bolo_de_Mirtilo_lyghzy.png"
+        },
+
+        {
+            titulo: "Bolo de Limão",
+            descricao: "Massa de baunilha com raspas de limão, cobertura de chocolate branco.",
+            preco: "R$ 25,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195886/Imagem_do_Codex_23_de_set._de_2026_17_36_41_n4zrqh.png"
+        },
+
+        {
+            titulo: "Bolo de Frutas Vermelhas",
+            descricao: "Massa recheada com frutas vermelhas, cobertura de chocolate branco e uma combinação fresca de frutas.",
+            preco: "R$ 28,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195886/Imagem_do_Codex_23_de_set._de_2026_17_34_51_hyyoyy.png"
+        },
+
+        {
+            titulo: "Bolo de Pistache",
+            descricao: "Massa de pistache com pedaços da matcha, cobertura cremosa e uma finalização de pistaches.",
+            preco: "R$ 28,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195885/Imagem_do_Codex_23_de_set._de_2026_17_35_05_un7uyg.png"
+        },
+
+        {
+            titulo: "Bolo de Red Velvet",
+            descricao: "Massa vermelha com recheio cremoso de cream cheese e geleia de morango, coberta com chocolate branco.",
+            preco: "R$ 25,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195885/Imagem_do_Codex_23_de_set._de_2026_17_34_17_t8zsgt.png"
+        },
+
+        {
+            titulo: "Bolo de Nozes",
+            descricao: "Massa delicada com nozes, coberta por uma camada de doce de leite e nozes.",
+            preco: "R$ 25,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195885/Imagem_do_Codex_23_de_set._de_2026_17_35_28_wc0i8g.png"
+        },
+
+        {
+            titulo: "Bolo de Banana com Chocolate",
+            descricao: "Massa de chocolate meio amargo com pedaços de banana, cobertura de chocolate e raspas crocantes.",
+            preco: "R$ 25,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195887/Imagem_do_Codex_23_de_set._de_2026_17_33_41_eynofk.png"
+        },
+
+        {
+            titulo: "Bolo de Ninho",
+            descricao: "Massa de baunilha com cobertura cremosa de brigadeiro de leite em pó e uma camada de leite em pó por cima.",
+            preco: "R$ 22,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195886/Imagem_do_Codex_23_de_set._de_2026_17_34_25_w3jjus.png"
+        },
+
+        {
+            titulo: "Bolo de Ninho com Nutella",
+            descricao: "Massa clara e com veios de Nutella, cobertura de leite em pó e Nutella por cima.",
+            preco: "R$ 25,00",
+            img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195885/Imagem_do_Codex_23_de_set._de_2026_17_34_58_rjgjlk.png"
+        }
     ],
 };
 
@@ -351,6 +447,7 @@ function carregarCards(categoria) {
         const card = template.content.cloneNode(true);
         const imagem = card.querySelector('img');
 
+        imagem.loading = 'lazy';
         imagem.src = p.img;
         imagem.alt = p.titulo;
         card.querySelector('.titulo-produto').textContent = p.titulo;
