@@ -720,6 +720,8 @@ img.icone{
 
 
 
+
+
 /* Botão de Comprar */
 .botao-comprar{
     text-decoration: none;
@@ -794,6 +796,8 @@ img.icone{
 
 
 
+
+
 /* Contato */
 .titulo-contato{
     font-family: var(--font-corpo);
@@ -802,6 +806,8 @@ img.icone{
     color: var(--marrom-escuro);
     text-align: center;
 }
+
+
 
 /* Página de contato */
 .pagina-contato{
@@ -816,11 +822,11 @@ img.icone{
     flex-wrap: wrap;
 }
 
-.navbar-link[aria-current="page"]{
+.navbar-link[aria-current="page"], .navbar-link.ativo{
     color: var(--rosa);
 }
 
-.navbar-link[aria-current="page"]::after{
+.navbar-link[aria-current="page"]::after, .navbar-link.ativo::after{
     width: 100%;
 }
 
@@ -985,6 +991,8 @@ img.icone{
     cursor: default;
 }
 
+
+
 /* Cores dos Canais de Contato */
 .contato-acao-whatsapp{
     background-color: #25d366;
@@ -1017,20 +1025,20 @@ img.icone{
     border-radius: 24px;
     border-block: 1px solid #e5cbc5;
 
-
-
     width: calc(100% - 3rem);
 
 }
 
 .contato-encomenda-ilustracao{
-
     text-align: center;
 
 }
 
 .contato-encomenda-ilustracao img{
     object-fit: contain;
+
+    width: 120px;
+    height: 120px;
 }
 
 .contato-encomenda-ilustracao p{
@@ -1102,25 +1110,9 @@ img.icone{
 
     margin: .5rem auto 0;
 }
-/* Mantém os destinos das âncoras visíveis abaixo do menu fixo. */
+
+
+
 #favoritos {
-    scroll-margin-top: 10rem;
-}
-
-a:focus-visible {
-    outline: 3px solid #a24e60;
-    outline-offset: 5px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #texto-principal h1, #texto-principal p, .linha-fina {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .carousel-item, .cards-cardapio, .cardapio-img img,
-    .botao, .botao-comprar {
-        transition: none;
-    }
+    scroll-margin-top: 7rem;
 }

@@ -1,6 +1,6 @@
-const elementos = document.querySelectorAll('#texto-principal h1, #texto-principal p, .linha-fina');
+const transicao = document.querySelectorAll('#texto-principal h1, #texto-principal p, .linha-fina');
 
-elementos.forEach((element, i) => {
+transicao.forEach((element, i) => {
     setTimeout(() => element.classList.add('visivel'), i * 300);
 });
 
@@ -133,6 +133,8 @@ const produtos = {
             img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1789934639/Imagem_do_Codex_20_de_set._de_2026_15_27_20_v6hdpw.png"
         }],
         
+
+
     brownies: [
         {
             titulo: "Brownie Tradicional",
@@ -232,6 +234,8 @@ const produtos = {
             img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941220/Imagem_do_Codex_20_de_set._de_2026_18_36_36_v3mi0v.png"
         }],
     
+
+
     donuts: [
         {
             titulo: "Donuts Glaceado",
@@ -336,10 +340,10 @@ const produtos = {
             descricao: "Chocolate, caramelo cremoso e pedaços crocantes.",
             preco: "R$ 15,00",
             img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790103413/Imagem_do_Codex_22_de_set._de_2026_15_14_27_p8tteu.png"
-        },
-        
-    ],
+        }],
     
+
+
     bolos: [
         {
             titulo: "Bolo de Chocolate",
@@ -430,8 +434,7 @@ const produtos = {
             descricao: "Massa clara e com veios de Nutella, cobertura de leite em pó e Nutella por cima.",
             preco: "R$ 25,00",
             img: "https://res.cloudinary.com/dn5ktthoj/image/upload/v1790195885/Imagem_do_Codex_23_de_set._de_2026_17_34_58_rjgjlk.png"
-        }
-    ],
+        }],
 };
 
 function carregarCards(categoria) {
@@ -446,8 +449,7 @@ function carregarCards(categoria) {
     produtos[categoria].forEach(p => {
         const card = template.content.cloneNode(true);
         const imagem = card.querySelector('img');
-
-        imagem.loading = 'lazy';
+        
         imagem.src = p.img;
         imagem.alt = p.titulo;
         card.querySelector('.titulo-produto').textContent = p.titulo;
