@@ -2,23 +2,33 @@
 
 @font-face {
     font-family: Montserrat;
-    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Michland;
+    src: url(../fonts/Michland\ Script.otf) format("opentype");
 }
 
 :root{
     /* Fontes */
     --fonte-corpo: "Montserrat", Arial;
+    --fonte-titulo: "Michland", Cursive;
 
     /* Cores */
     --branco: #ffffff;
     --preto: #000000;
     --marrom: #4b2f2a;
-    --marrom-transparente: #4b2f2a8a; 
+    --marrom-transparente: #4b2f2aa0; 
     --rosa: #db8e9a;
+
+    /* Sombras */
+    --sombra-preta: #00000052;
 
     /* Transição */
     --transicao-links: color 0.3s ease;
-    --transicao-animacao: width 0.5s ease
+    --transicao-animacao: width 0.5s ease;
+    --transicao-visivel: opacity 1s ease, transform 1s ease;
 }
 
 
@@ -124,6 +134,10 @@ nav div ul li a:hover::after{
     height: 100%;
 }
 
+.carousel-item{
+    transition: transform 2s ease-in-out;
+}
+
 div.img-carrossel{
     width: 100%;
     height: 100%;
@@ -162,4 +176,75 @@ div.img-carrossel::after{
 
     position: absolute;
     inset: 0;
+}
+
+
+
+    /* Texto Principal */
+#texto-principal{
+    position: absolute;
+
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titulo-principal{
+    font-family: var(--fonte-titulo);
+    font-size: 6rem;
+    font-weight: 500;
+
+    color: var(--rosa);
+    text-shadow: 5px 2px 2px var(--sombra-preta);
+}
+
+div.texto-principal{
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    font-family: var(--fonte-corpo);
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    color: var(--branco);
+    text-shadow: 1px 2px 2px var(--sombra-preta);
+    line-height: 1rem;
+}
+
+.frase-destaque{
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: var(--rosa);
+    text-shadow: 1px 2px 2px var(--sombra-preta);
+
+    padding-top: 1rem;
+}
+
+div.linha{
+    background-color: var(--rosa);
+
+    width: 35%;
+    height: 2px;
+
+    display: block;
+    margin: -0.5rem auto 0;
+}
+
+#texto-principal h1, #texto-principal p, .linha{
+    opacity: 0;
+
+    transform: translateY(30px);
+    transition: var(--transicao-visivel);
+}
+
+#texto-principal h1, #texto-principal p, .linha{
+    &.visivel{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
