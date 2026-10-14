@@ -10,15 +10,24 @@
     src: url(../fonts/Michland\ Script.otf) format("opentype");
 }
 
+@font-face {
+    font-family: Damion;
+    src: url(../fonts/Damion-Regular.ttf) format("truetype");
+}
+
 :root{
     /* Fontes */
     --fonte-corpo: "Montserrat", Arial;
     --fonte-titulo: "Michland", Cursive;
+    --fonte-titulo-secudario: "Damion", Cursive;
 
     /* Cores */
     --branco: #ffffff;
+    --bege: #fff2e4;
+    --bege-transparente: #fcf7f3;
     --preto: #000000;
     --marrom: #4b2f2a;
+    --marrom-claro: #9165603d;
     --marrom-transparente: #4b2f2aa0; 
     --rosa: #db8e9a;
 
@@ -29,6 +38,7 @@
     --transicao-links: color 0.3s ease;
     --transicao-animacao: width 0.5s ease;
     --transicao-visivel: opacity 1s ease, transform 1s ease;
+    --transitcao-card: transform 0.8s ease;
 }
 
 
@@ -43,8 +53,9 @@
 /* Barra de Navegação */
 nav{
     background-color: var(--marrom);
-    display: flex;
-    flex-direction: column;
+    border-bottom: 1px solid var(--rosa);
+
+    display: block;
     justify-content: center;
     align-items: center;
 }
@@ -247,4 +258,190 @@ div.linha{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+    /* Sobre Nossos Produtos */
+#sobre-nossos-produtos{
+    background-color: var(--bege);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.sobre-nossos-produtos{
+    background-color: var(--branco);
+    border-radius: 15px;
+
+    box-shadow: 3px 3px 10px var(--sombra-preta);
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    width: 85%;
+    height: 90vh;
+
+    margin: 2rem 0 2rem;
+    padding: 1rem 5rem 1rem;
+}
+
+div h1.titulo-sobre-produtos{
+    font-family: var(--fonte-titulo-secudario);
+    font-size: 3.5rem;
+
+    color: var(--marrom);
+    text-shadow: 1px 2px 2px var(--sombra-preta);
+
+    text-align: center;
+
+    margin-top: 1rem;
+}
+
+div h1 span.palavra-destaque{
+    color: var(--rosa);
+}
+
+div.linha-decorativa{
+    background-color: var(--rosa);
+
+    width: 35%;
+    height: 2px;
+
+    display: block;
+    margin: 0.5rem auto 3rem;
+}
+
+div.sobre-nossos-produtos p{
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+
+    color: var(--marrom);
+    text-align: center;
+    text-indent: 50px;
+}
+
+div p span.palavra-destaque{
+    font-weight: 800;
+    font-style: italic;
+
+    color: var(--rosa);
+}
+
+div p span.produtos-destaque{
+    font-weight: 800;
+    font-style: italic;
+
+    color: var(--marrom);
+}
+
+    /*  Cards Rotatórios */
+div.cards-rotatorio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+div.card-produto{
+    background-color: var(--bege-transparente);
+    border: 1px solid var(--marrom-claro);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px var(--sombra-preta);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    transform-style: preserve-3d;
+    transition: var(--transitcao-card);
+
+    width: 30%;
+    height: 30vh;
+
+    padding: 1.5rem;
+}
+
+div.card-frente{
+    background-color: var(--bege-transparente);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    
+    position: absolute;
+
+    transform: rotateY(0deg);
+
+    backface-visibility: hidden;
+
+    transition: var(--transitcao-card);
+}
+
+div.card-frente::before{
+    content: "";
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: var(--marrom-claro);
+}
+
+div.card-verso{
+    box-sizing: border-box;
+    background-color: var(--marrom-claro);
+    border: 1px solid var(--marrom-claro);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px var(--sombra-preta);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    inset: 0;
+
+    backface-visibility: hidden;
+
+    transition: var(--transitcao-card);
+    transform: rotateY(180deg);
+}
+
+div.card-verso p{
+    width: 100%;
+    font-family: var(--fonte-corpo);
+    font-size: 15px;
+    font-weight: 500;
+
+    color: var(--marrom);
+    text-align: center;
+    line-height: 1rem;
+}
+
+div img.icone-cards{
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    width: 5rem;
+    height: auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+div.card-produto:hover,
+div.card-produto:focus-visible{
+    transform: rotateY(180deg);
 }
