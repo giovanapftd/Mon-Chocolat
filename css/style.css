@@ -27,12 +27,18 @@
     --bege-transparente: #fcf7f3;
     --preto: #000000;
     --marrom: #4b2f2a;
-    --marrom-claro: #9165603d;
+    --marrom-card-texto: #3e2925;
+    --marrom-claro: #c28c8676;
     --marrom-transparente: #4b2f2aa0; 
     --rosa: #db8e9a;
 
+    /* Cores Cards */
+    --borda-card: #d1b7b7;
+    --bege-card-verso: #ecdfd9;
+
     /* Sombras */
     --sombra-preta: #00000052;
+    --sombra-card: #4b2f2a1a;
 
     /* Transição */
     --transicao-links: color 0.3s ease;
@@ -260,6 +266,8 @@ div.linha{
     }
 }
 
+
+
     /* Sobre Nossos Produtos */
 #sobre-nossos-produtos{
     background-color: var(--bege);
@@ -318,7 +326,6 @@ div.sobre-nossos-produtos p{
 
     color: var(--marrom);
     text-align: center;
-    text-indent: 50px;
 }
 
 div p span.palavra-destaque{
@@ -342,91 +349,93 @@ div.cards-rotatorio{
     align-items: center;
 
     gap: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 div.card-produto{
-    background-color: var(--bege-transparente);
-    border: 1px solid var(--marrom-claro);
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px var(--sombra-preta);
+    box-sizing: border-box;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    transform-style: preserve-3d;
-    transition: var(--transitcao-card);
-
-    width: 30%;
+    width: 28%;
     height: 30vh;
 
-    padding: 1.5rem;
+    position: relative;
+    perspective: 1000px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+div.cards{
+    position: absolute;
+    inset: 0;
+
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 div.card-frente{
     background-color: var(--bege-transparente);
+    border: 1px solid var(--borda-card);
     border-radius: 10px;
+    box-shadow: 0 8px 20px var(--sombra-card);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
-    height: 100%;
     inset: 0;
-    
     position: absolute;
 
     transform: rotateY(0deg);
 
     backface-visibility: hidden;
-
-    transition: var(--transitcao-card);
+    -webkit-backface-visibility: hidden;
 }
 
 div.card-frente::before{
     content: "";
-    position: absolute;
+
+    background-color: var(--marrom-claro);
+    border-radius: 50%;
+
     width: 8rem;
     height: 8rem;
-    border-radius: 50%;
-    background-color: var(--marrom-claro);
+
+    position: absolute;
 }
 
 div.card-verso{
-    box-sizing: border-box;
-    background-color: var(--marrom-claro);
-    border: 1px solid var(--marrom-claro);
+    background-color: var(--bege-card-verso);
+    border: 1px solid var(--borda-card);
     border-radius: 10px;
-    box-shadow: 1px 1px 10px var(--sombra-preta);
+    box-shadow: 0 8px 20px var(--sombra-card);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
-    height: 100%;
-
     position: absolute;
     inset: 0;
 
-    backface-visibility: hidden;
+    padding: 1.5rem;
 
-    transition: var(--transitcao-card);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transform: rotateY(180deg);
 }
 
 div.card-verso p{
-    width: 100%;
     font-family: var(--fonte-corpo);
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 500;
 
-    color: var(--marrom);
+    color: var(--marrom-card-texto);
     text-align: center;
-    line-height: 1rem;
+    line-height: 1.4;
+
+    width: 100%;
+    margin: 0;
 }
 
 div img.icone-cards{
@@ -441,7 +450,8 @@ div img.icone-cards{
     z-index: 1;
 }
 
-div.card-produto:hover,
-div.card-produto:focus-visible{
+div.card-produto:hover .cards,
+div.card-produto:focus-visible .cards{
     transform: rotateY(180deg);
 }
+
