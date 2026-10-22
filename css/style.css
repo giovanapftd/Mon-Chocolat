@@ -455,3 +455,26 @@ div.card-produto:focus-visible .cards{
     transform: rotateY(180deg);
 }
 
+<<<<<<< HEAD
+=======
+div.card-produto:hover .card-verso,
+div.card-produto:focus-visible .card-verso{
+    transform: rotateY(0deg);
+}
+
+
+
+/* Banner */
+div.banner{
+    background-image: url("../imgs/Banner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    border-bottom: 2px solid var(--rosa);
+    border-top: 2px solid var(--rosa);
+
+    width: 100%;
+    height: 30vh;
+}
