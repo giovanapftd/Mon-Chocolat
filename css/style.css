@@ -854,6 +854,50 @@ div.redessocias a.email{
     background-color: var(--email);
 }
 
+div.mensagem_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    flex-direction: column;
+    text-align: center;
+}
+
+footer.footer-contato #conteudo_footer{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+
+    width: min(90%, 1400px);
+    gap: 2rem;
+}
+
+div.mensagem_footer h1{
+    font-family: var(--fonte-titulo-secudario);
+    font-size: 2.5rem;
+
+    color: var(--rosa);
+
+    max-width: 25rem;
+    margin-bottom: 1.5rem;
+}
+
+div.mensagem_footer a{
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+
+    color: var(--branco);
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+div.mensagem_footer a:hover{
+    color: var(--rosa);
+
+    transition: var(--transicao-links);
+}
+
 #direitos_reservados{
     border-top: 1px solid var(--rosa-transparente);
 
@@ -923,6 +967,7 @@ p.direitos_reservados{
 
     margin-top: 5rem;
     padding: 0 1rem;
+    scroll-margin-top: 7rem;
 }
 
 #contato h2.texto_contato,
