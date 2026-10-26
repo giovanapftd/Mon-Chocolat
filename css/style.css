@@ -28,10 +28,12 @@
     --cinza: #fffdfc80;
     --preto: #000000;
     --marrom: #4b2f2a;
+    --marrom-escuro: #3e2925;
     --marrom-card-texto: #3e2925;
     --marrom-claro: #c28c8676;
     --marrom-transparente: #4b2f2aa0; 
     --rosa: #db8e9a;
+    --rosa-queimado: #89545b;
     --rosa-transparente: #db8e9a4d;
 
     /* Cores Cards */
@@ -865,4 +867,266 @@ p.direitos_reservados{
     font-size: 0.8rem;
 
     color: var(--cinza)
+}
+
+
+
+/* Contato */
+#contatos{
+    background-color: var(--bege);
+
+    width: 100%;
+
+    padding-bottom: 3rem;
+}
+
+#textoprincipal_contato{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 2rem 1rem 0;
+}
+
+#contatos p.frase_abertura{
+    font-family: var(--fonte-corpo);
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    color: var(--rosa-queimado);
+    letter-spacing: 0.15rem;
+
+    margin-bottom: 1.25rem;
+}
+
+#contatos h1.titulo_contato{
+    font-family: var(--fonte-titulo-secudario);
+    font-size: 3.5rem;
+
+    color: var(--marrom-escuro);
+
+    margin-bottom: 1rem;
+}
+
+#contatos p.sobretitulo_contato{
+    font-family: var(--fonte-corpo);
+    font-size: 0.95rem;
+
+    color: var(--rosa-queimado);
+    letter-spacing: 0.02rem;
+}
+
+#contato{
+    text-align: center;
+
+    margin-top: 5rem;
+    padding: 0 1rem;
+}
+
+#contato h2.texto_contato,
+#encomenda h2.titulo_encomenda{
+    font-family: var(--fonte-titulo-secudario);
+
+    color: var(--marrom-escuro);
+}
+
+#contato h2.texto_contato{
+    font-size: 2.25rem;
+
+    margin-bottom: 0.75rem;
+}
+
+#canais_comunicacao{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    width: 95%;
+
+    gap: 1rem;
+
+    margin: 2rem 2em;
+}
+
+#canais_comunicacao .canais_comunicacao{
+    background-color: var(--bege-transparente);
+    border: 1px solid var(--borda-card);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px var(--sombra-card);
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    height: 50vh;
+    padding: 2rem 1.25rem 1.4rem;
+}
+
+#canais_comunicacao .redessociais_icones{
+    font-size: 1.5rem;
+
+    background-color: #f9e9e8;
+    border-radius: 50%;
+
+    color: var(--rosa-queimado);
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    width: 3.5rem;
+    height: 3.5rem;
+
+    margin-bottom: 1rem;
+}
+
+#canais_comunicacao h3{
+    font-family: var(--fonte-corpo);
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    color: var(--marrom-escuro);
+
+    margin-bottom: 0.65rem;
+}
+
+#canais_comunicacao p{    
+    font-family: var(--fonte-corpo);
+    font-size: 0.85rem;
+
+    color: var(--marrom-card-texto);
+    line-height: 1.7;
+
+    margin-bottom: 1.25rem;
+}
+
+#canais_comunicacao .botao_contato{
+    font-family: var(--fonte-corpo);
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    border: 0;
+    border-radius: 2rem;
+
+    color: var(--branco);
+
+    width: 100%;
+    height: 2.6rem;
+
+    cursor: pointer;
+
+    transition: var(--transicao-botao);
+}
+
+#canais_comunicacao .botao_contato:hover{
+    filter: brightness(0.92);
+
+    transform: translateY(-2px);
+}
+
+#canais_comunicacao .botao_whatsapp{
+    background-color: var(--whatsapp);
+}
+
+#canais_comunicacao .botao_instagram{
+    background: var(--instagram);
+}
+
+#canais_comunicacao .botao_facebook{
+    background-color: var(--facebook);
+}
+
+#canais_comunicacao .botao_email{
+    background-color: var(--email);
+}
+
+#canais_comunicacao .botao_linkedin{
+    background-color: var(--linkedin);
+}
+
+#encomenda{
+    background-color: #f4e4df;
+    border: 1px solid var(--rosa-transparente);
+    border-radius: 24px;
+
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2fr);
+    align-items: center;
+
+    width: 90%;
+    height: 50vh;
+
+    gap: 2rem;
+
+    margin: 3rem auto 0;
+    padding: 3rem;
+}
+
+#encomenda .encomenda{
+    text-align: center;
+}
+
+#encomenda .encomenda img{
+    object-fit: contain;
+
+    width: 6rem;
+    height: 6rem;
+
+    margin-bottom: 1.5rem;
+}
+
+#encomenda .encomenda p{
+    font-family: var(--fonte-titulo-secudario);
+    font-size: 1.5rem;
+
+    color: var(--marrom-escuro);
+    line-height: 1.5;
+}
+
+#encomenda .texto_encomenda > p:not(.frase_abertura){
+    font-family: var(--fonte-corpo);
+    font-size: 0.95rem;
+
+    color: var(--marrom-card-texto);
+    line-height: 1.8;
+
+    margin: 0 0 1.5rem;
+}
+
+#encomenda h2.titulo_encomenda{
+    font-size: 2.25rem;
+
+    margin-bottom: 1rem;
+}
+
+#encomenda .contato-cardapio{
+    font-family: var(--fonte-corpo);
+    font-size: 0.85rem;
+
+    background-color: var(--marrom-escuro);
+    border-radius: 2rem;
+
+    color: var(--branco);
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    height: 3.25rem;
+    padding: 0.85rem 1.5rem;
+    
+    transition: var(--transicao-botao);
+}
+
+#encomenda .contato-cardapio:hover{
+    background-color: var(--marrom);
+
+    transform: translateY(-2px);
 }
