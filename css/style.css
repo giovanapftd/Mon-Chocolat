@@ -25,16 +25,25 @@
     --branco: #ffffff;
     --bege: #fff2e4;
     --bege-transparente: #fcf7f3;
+    --cinza: #fffdfc80;
     --preto: #000000;
     --marrom: #4b2f2a;
     --marrom-card-texto: #3e2925;
     --marrom-claro: #c28c8676;
     --marrom-transparente: #4b2f2aa0; 
     --rosa: #db8e9a;
+    --rosa-transparente: #db8e9a4d;
 
     /* Cores Cards */
     --borda-card: #d1b7b7;
     --bege-card-verso: #ecdfd9;
+
+    /* Cores Redes Sociais */
+    --whatsapp: #25d366;
+    --instagram: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    --facebook: #1877f2;
+    --linkedin: #007EBB;
+    --email: #ED0000;
 
     /* Sombras */
     --sombra-preta: #00000052;
@@ -47,6 +56,7 @@
     --transicao-card: transform 0.8s ease;
     --transicao-cards-favoritos: transform 0.3s ease, box-shadow 0.3s ease;
     --transicao-botao: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    --transicao-redessociais: filter 0.3s, transform 0.3s;
 }
 
 
@@ -270,7 +280,7 @@ div.linha{
 
 
 
-    /* Sobre Nossos Produtos */
+/* Sobre Nossos Produtos */
 #sobre-nossos-produtos{
     background-color: var(--bege);
 
@@ -343,6 +353,8 @@ div p span.produtos-destaque{
 
     color: var(--marrom);
 }
+
+
 
     /*  Cards Rotatórios */
 div.cards-rotatorio{
@@ -457,6 +469,8 @@ div.card-produto:focus-visible .cards{
     transform: rotateY(180deg);
 }
 
+
+
 /* Banner */
 div.banner{
     background-image: url("../imgs/Banner.png");
@@ -503,6 +517,8 @@ div.favoritos > p{
 
     margin-bottom: 1rem;
 }
+
+
 
     /* Cards Favoritos */
 div.cards-favoritos{
@@ -636,4 +652,185 @@ a.botao-comprar:focus-visible{
     background-color: var(--marrom);
     color: var(--branco);
     transform: scale(1.03);
+}
+
+
+
+/* Footer */
+footer{
+    background-color: var(--marrom);
+    border-top: 3px solid var(--rosa);
+}
+
+#conteudo_footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 12rem;
+
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+div.logotipo_frase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    flex-direction: column;
+}
+
+img.logotipo_footer{
+    border-radius: 50%;
+    border: 3px solid var(--rosa);
+
+    width: 9rem;
+    height: auto;
+}
+
+p.frase_footer{
+    font-family: var(--fonte-corpo);
+    font-weight: 500;
+    font-style: italic;
+
+    color: var(--rosa);
+    text-align: center;
+
+    margin-top: 1rem;
+}
+
+div.categorias_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+div.categorias_links h1{
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+
+    color: var(--rosa);
+
+    margin-bottom: 0.8rem;
+}
+
+div.categorias_links ul{
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+div.categorias_links ul li a{
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+
+    color: var(--branco);
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    margin-bottom: 0.8rem;
+}
+
+div.categorias_links ul li a:hover{
+    color: var(--rosa);
+
+    transition: var(--transicao-links);
+}
+
+div.redessocias_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+div.redessocias_footer h1{
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+
+    color: var(--rosa);
+
+    margin-bottom: 0.3rem;
+}
+
+div.redessocias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 0.8rem;
+}
+
+div.redessocias a{
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    font-weight: 600;
+
+    border-radius: 30px;
+
+    color: var(--branco);
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 11rem;
+
+    gap: 0.65rem;
+    padding: 0.5rem 1rem;
+
+    transition: var(--transicao-redessociais);
+}
+
+div.redessocias a:hover{
+    filter: brightness(1.2);
+}
+
+div.redessocias a.whatsapp{
+    background-color: var(--whatsapp);
+}
+
+div.redessocias a.instagram{
+    background: var(--instagram);
+}
+
+div.redessocias a.facebook{
+    background-color: var(--facebook);
+}
+
+div.redessocias a.linkedin{
+    background-color: var(--linkedin);
+}
+
+div.redessocias a.email{
+    background-color: var(--email);
+}
+
+#direitos_reservados{
+    border-top: 1px solid var(--rosa-transparente);
+
+    text-align: center;
+
+    padding: 1rem;
+}
+
+p.direitos_reservados{
+    font-family: var(--fonte-corpo);
+    font-size: 0.8rem;
+
+    color: var(--cinza)
 }
