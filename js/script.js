@@ -146,8 +146,95 @@ const produtos = {
             titulo: 'Cookie de Chocolate Branco',
             descricao: 'Massa tradicional macia com gotas de chocolate branco.',
             preco: 'R$ 10,00',
+        }
+    ],
+
+    brownies: [
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941231/Imagem_do_Codex_20_de_set._de_2026_18_08_14_i7e8ju.png',
+            titulo: 'Brownie Tradicional',
+            descricao: 'Clássico e chocolatudo, com casquinha crocante e interior macio.',
+            preco: 'R$10,00',
         },
-    ]
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941227/Imagem_do_Codex_20_de_set._de_2026_18_22_25_elp3m1.png',
+            titulo: 'Brownie com M&M',
+            descricao: 'Brownie tradicional com confeitos de chocolate coloridos.',
+            preco: 'R$10,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941220/Imagem_do_Codex_20_de_set._de_2026_18_36_46_lxboex.png',
+            titulo: 'Brownie com Pistache',
+            descricao: 'Brownie tradicional finalizado com pistache triturado e um toque crocante.',
+            preco: 'R$12,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789942013/Imagem_do_Codex_20_de_set._de_2026_19_05_46_oq95x4.png',
+            titulo: 'Brownie de Ferrero Rocher',
+            descricao: 'Recheado com creme de avelã e com pedaços crocantes de avelã.',
+            preco: 'R$15,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941230/Imagem_do_Codex_20_de_set._de_2026_18_38_00_dgg8hz.png',
+            titulo: 'Brownie com Chocolate Branco',
+            descricao: 'Brownie de chocolate intenso com recheio de chocolate branco.',
+            preco: 'R$12,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789351756/Brownie_de_Ninho_com_Nutella_ldyci0.png',
+            titulo: 'Brownie de Ninho e Nutella',
+            descricao: 'Recheado com creme de leite Ninho com Nutella.',
+            preco: 'R$15,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941204/Imagem_do_Codex_20_de_set._de_2026_18_53_00_blyuzj.png',
+            titulo: 'Brownie com Brigadeiro de Limão',
+            descricao: 'Brownie de chocolate recheado com raspas e brigadeiro de limão.',
+            preco: 'R$15,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941225/Imagem_do_Codex_20_de_set._de_2026_18_09_18_cak5e8.png',
+            titulo: 'Brownie com Brigadeiro',
+            descricao: 'Brownie de chocolate recheado com brigadeiro cremoso.',
+            preco: 'R$12,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941220/Imagem_do_Codex_20_de_set._de_2026_18_30_15_vlzleu.png',
+            titulo: 'Brownie com Doce de Leite',
+            descricao: 'Chocolate intenso combinado com um recheio de doce de leite.',
+            preco: 'R$15,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941216/Imagem_do_Codex_20_de_set._de_2026_18_40_51_fyaqxa.png',
+            titulo: 'Brownie com Chocolate Branco e Morango',
+            descricao: 'Recheio cremoso de chocolate com pedaços de morango.',
+            preco: 'R$18,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941220/Imagem_do_Codex_20_de_set._de_2026_18_49_51_sboek3.png',
+            titulo: 'Brownie de Red Velvet',
+            descricao: 'Massa red velvet, recheada com chocolate branco cremoso.',
+            preco: 'R$15,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941223/Imagem_do_Codex_20_de_set._de_2026_18_12_12_tvk9fl.png',
+            titulo: 'Brownie com Ninho com Oreo',
+            descricao: 'Recheio de leite Ninho com pedaços crocantes de Oreo.',
+            preco: 'R$18,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941226/Imagem_do_Codex_20_de_set._de_2026_18_45_33_arhry1.png',
+            titulo: 'Brownie de Café',
+            descricao: 'Brownie com toque de café, recheio de chocolate e grãos de café.',
+            preco: 'R$18,00',
+        },
+        {
+            img: 'https://res.cloudinary.com/dn5ktthoj/image/upload/v1789941220/Imagem_do_Codex_20_de_set._de_2026_18_36_36_v3mi0v.png',
+            titulo: 'Brownie com Chocolate e Morango',
+            descricao: 'Recheio de chocolate com pedaços de morango.',
+            preco: 'R$15,00',
+        }
+    ],
 };
 
 
@@ -181,3 +268,4 @@ function carregarCards(categoria) {
 
 carregarCards('favoritos')
 carregarCards('cookies')
+carregarCards('brownies')
