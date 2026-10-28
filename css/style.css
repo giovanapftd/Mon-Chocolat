@@ -85,8 +85,17 @@ nav div.logotipo{
     justify-content: center;
     align-items: center;
 
-    padding-top: 1.5rem;
+    padding-top: 1.1rem;
     margin-bottom: 1rem;
+}
+
+.navbar-toggler{
+    border: 1px solid var(--rosa);
+}
+
+.navbar-toggler:focus{
+    border-color: var(--rosa);
+    box-shadow: 0 0 0 0.15rem var(--rosa-transparente);
 }
 
 .img_logotipo{
@@ -214,16 +223,18 @@ div.img-carrossel::after{
     /* Texto Principal */
 #texto-principal{
     position: absolute;
+    width: min(94vw, 64rem);
 
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .titulo-principal{
     font-family: var(--fonte-titulo);
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 12vw, 6rem);
     font-weight: 500;
+    white-space: nowrap;
 
     color: var(--rosa);
     text-shadow: 5px 2px 2px var(--sombra-preta);
@@ -302,15 +313,17 @@ div.sobre-nossos-produtos{
     align-items: center;
 
     width: 85%;
-    height: 90vh;
+    min-height: 90vh;
+    height: auto;
 
     margin: 2rem 0 2rem;
-    padding: 1rem 5rem 1rem;
+    padding: 1rem clamp(1rem, 5vw, 5rem);
 }
 
 div h1.titulo-sobre-produtos{
     font-family: var(--fonte-titulo-secudario);
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    white-space: nowrap;
 
     color: var(--marrom);
     text-shadow: 1px 2px 2px var(--sombra-preta);
@@ -360,31 +373,23 @@ div p span.produtos-destaque{
 
     /*  Cards Rotatórios */
 div.cards-rotatorio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 1.5rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 div.card-produto{
     box-sizing: border-box;
 
-    width: 28%;
     height: 30vh;
 
     position: relative;
     perspective: 1000px;
 
     cursor: pointer;
-
-    padding: 0;
 }
 
 div.cards{
     position: absolute;
-    inset: 0;
+    inset: 0.5rem;
 
     transform-style: preserve-3d;
     transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -476,10 +481,10 @@ div.card-produto:focus-visible .cards{
 /* Banner */
 div.banner{
     background-image: url("../imgs/Banner.png");
-    background-position: center;
-    background-size: cover;
+    background-position: center center;
+    background-size: cover !important;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment:fixed;
 
     border-bottom: 2px solid var(--rosa);
     border-top: 2px solid var(--rosa);
@@ -501,7 +506,7 @@ section#favoritos, #cardapio{
 
 div.favoritos > h1{
     font-family: var(--fonte-titulo-secudario);
-    font-size: 3rem;
+    font-size: clamp(1.75rem, 6vw, 3rem);
     font-weight: 500;
 
     color: var(--marrom);
@@ -512,7 +517,7 @@ div.favoritos > h1{
 
 div.cardapio> h1{
     font-family: var(--fonte-titulo-secudario);
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 7vw, 3.5rem);
     font-weight: 500;
 
     color: var(--rosa);
@@ -541,19 +546,12 @@ div.cards-cardapio{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    gap: 2rem;
     margin: 1.5rem;
     padding-bottom: 1.5rem;
 }
 
 div.cards-cardapio{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
-
-    gap: 1rem;
-
+    align-items: stretch;
     margin: 1rem;
 }
 
@@ -594,13 +592,7 @@ img.img-cardapio{
 
 div.conteudo-favorito,
 div.conteudo-cardapio{
-    display: grid;
-    grid-template-rows: 3.5rem minmax(0, 1fr) 5rem 3rem;
-    justify-content: center;
-    align-items: center;
-
     height: 40vh;
-    padding: 0 2rem 2rem;
 }
 
 h2.titulo-produto{
@@ -651,9 +643,9 @@ p.preco-produto{
     color: var(--preto);
 
     position: relative;
-    top: 2.5rem;
+    top: 4rem;
 
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.75rem;
     margin-left: 0.3rem;
 }
 
@@ -674,13 +666,23 @@ a.botao-comprar{
     width: 100%;
 
     position: relative;
-    top: 2rem;
+    top: 4rem;
 
     padding: 0.5rem 1rem;
     
     transition: var(--transicao-botao);
 }
 
+div.conteudo-cardapio p.preco-produto{
+    position: static;
+    margin: auto 0 0.75rem 0.3rem;
+}
+
+div.conteudo-cardapio a.botao-comprar{
+    position: static;
+    margin-top: 0;
+    flex-shrink: 0;
+}
 a.botao-comprar:hover,
 a.botao-comprar:focus-visible{
     background-color: var(--marrom);
@@ -700,8 +702,6 @@ footer{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
-    gap: 12rem;
 
     margin: 0 auto;
     padding: 2rem 0;
@@ -745,7 +745,7 @@ div.categorias_links{
 
 div.categorias_links h1{
     font-family: var(--fonte-titulo);
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 7vw, 3.5rem);
 
     color: var(--rosa);
 
@@ -791,7 +791,7 @@ div.redessocias_footer{
 
 div.redessocias_footer h1{
     font-family: var(--fonte-titulo);
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 7vw, 3.5rem);
 
     color: var(--rosa);
 
@@ -864,18 +864,9 @@ div.mensagem_footer{
     text-align: center;
 }
 
-footer.footer-contato #conteudo_footer{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: center;
-
-    width: min(90%, 1400px);
-    gap: 2rem;
-}
-
 div.mensagem_footer h1{
     font-family: var(--fonte-titulo-secudario);
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
 
     color: var(--rosa);
 
@@ -947,7 +938,7 @@ p.direitos_reservados{
 
 #contatos h1.titulo_contato{
     font-family: var(--fonte-titulo-secudario);
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 7vw, 3.5rem);
 
     color: var(--marrom-escuro);
 
@@ -978,20 +969,15 @@ p.direitos_reservados{
 }
 
 #contato h2.texto_contato{
-    font-size: 2.25rem;
+    font-size: clamp(1.8rem, 5vw, 2.25rem);
 
     margin-bottom: 0.75rem;
 }
 
 #canais_comunicacao{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-
     width: 95%;
 
-    gap: 1rem;
-
-    margin: 2rem 2em;
+    margin: 2rem auto;
 }
 
 #canais_comunicacao .canais_comunicacao{
@@ -1099,14 +1085,11 @@ p.direitos_reservados{
     border: 1px solid var(--rosa-transparente);
     border-radius: 24px;
 
-    display: grid;
-    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2fr);
     align-items: center;
 
     width: 90%;
-    height: 50vh;
-
-    gap: 2rem;
+    min-height: 50vh;
+    height: auto;
 
     margin: 3rem auto 0;
     padding: 3rem;
@@ -1144,7 +1127,7 @@ p.direitos_reservados{
 }
 
 #encomenda h2.titulo_encomenda{
-    font-size: 2.25rem;
+    font-size: clamp(1.8rem, 5vw, 2.25rem);
 
     margin-bottom: 1rem;
 }

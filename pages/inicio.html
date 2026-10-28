@@ -19,13 +19,15 @@
 
     <!-- Barra de Navegação -->
         <header>
-            <nav>
-                <div class="logotipo">
+            <nav class="navbar navbar-expand-lg px-3 px-lg-5 py-2">
+            <div class="container-fluid p-0 d-flex flex-wrap justify-content-center position-relative">
+                <div class="logotipo navbar-brand mx-auto">
                     <a href="inicio.html"> <img src="../imgs/Logotipo.png" alt="Logotipo da Mon Chocolat" class="img_logotipo"> </a>
                 </div>
 
-                <div class="lista_links">
-                    <ul>
+                <button class="navbar-toggler bg-light position-absolute end-0 top-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+                <div class="lista_links collapse navbar-collapse w-100 justify-content-center" id="menuPrincipal">
+                    <ul class="navbar-nav flex-column flex-lg-row align-items-center mx-auto gap-1 gap-lg-4">
                         <li><a href="inicio.html">Início</a></li>
                         <li><a href="cookie.html">Cookies</a></li>
                         <li><a href="brownie.html">Brownies</a></li>
@@ -34,13 +36,14 @@
                         <li><a href="contato.html">Contatos</a></li>
                     </ul>
                 </div>
-            </nav>
+                        </div>
+        </nav>
         </header>
 
     <!-- Conteúdo Principal -->
         <main>
             <!-- Carrossel de Imagens -->
-            <section id="carrossel-imagens">
+            <section id="carrossel-imagens" class="position-relative">
                 <div class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active img-carrossel" data-bs-interval="4000">
@@ -57,9 +60,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Texto Principal -->
             <section id="texto-principal">
                 <div class="texto-principal">
                     <h1 class="titulo-principal">Mon Chocolat</h1>
@@ -69,6 +69,7 @@
                     <p class="frase-destaque">Doçura • Sabor • Delicadeza</p>
                     <div class="linha"></div>
                 </div>
+            </section>
             </section>
 
             <!-- Sobre Nossos Produtos -->
@@ -80,8 +81,8 @@
                     <p>Na <span class="palavra-destaque">Mon Chocolat</span>, cada doce é preparado para transformar pequenos momentos em experiências deliciosas. Nossos <span class="produtos-destaque">cookies, brownies, donuts e bolos</span> combinam sabor, carinho e ingredientes selecionados para criar doces irresistíveis.</p>
                     <p>Do clássico ao mais especial, cada produto é feito pensando em quem acredita que todo dia merece um pouco mais de chocolate e felicidade.</p>
 
-                    <div class="cards-rotatorio">
-                        <div class="card-produto" tabindex="0">
+                    <div class="cards-rotatorio row row-cols-1 row-cols-xl-4 g-3">
+                        <div class="card-produto col" tabindex="0">
                             <div class="cards">
                                 <div class="card-frente">
                                     <img src="../imgs/icons/Cookies.png" alt="Ícone de Cookie" class="icone-cards">
@@ -92,7 +93,7 @@
                             </div>
                         </div>
 
-                        <div class="card-produto" tabindex="0">
+                        <div class="card-produto col" tabindex="0">
                             <div class="cards">
                                 <div class="card-frente">
                                     <img src="../imgs/icons/Brownie.png" alt="Ícone de Brownie" class="icone-cards">
@@ -103,7 +104,7 @@
                             </div>
                         </div>
 
-                        <div class="card-produto" tabindex="0">
+                        <div class="card-produto col" tabindex="0">
                             <div class="cards">
                                 <div class="card-frente">
                                     <img src="../imgs/icons/Donuts.png" alt="Ícone de Donuts" class="icone-cards">
@@ -114,7 +115,7 @@
                             </div>
                         </div>
 
-                        <div class="card-produto" tabindex="0">
+                        <div class="card-produto col" tabindex="0">
                             <div class="cards">
                                 <div class="card-frente">
                                     <img src="../imgs/icons/Bolo.png" alt="Ícone de Bolo" class="icone-cards">
@@ -140,19 +141,19 @@
                     <h1>Os <span class="palavra-destaque">Favoritos</span> da Mon Chocolat</h1>
                     <p>Os queridinhos de quem ama um bom doce!</p>
 
-                    <div class="cards-favoritos">
+                    <div class="cards-favoritos row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
                         <template>
-                            <div class="card-favorito">
+                            <div class="col"><div class="card-favorito card d-flex flex-column">
                                 <img src="" alt="" class="img-favorito">
 
-                                <div class="conteudo-favorito">
+                                <div class="conteudo-favorito d-flex flex-column flex-grow-1 p-3 p-md-4">
                                     <h2 class="titulo-produto"></h2>
                                     <p class="descricao-produto"></p>
                                     <p class="preco-produto"></p>
 
                                     <a class="botao-comprar">Ver Cardápio</a>
                                 </div>
-                            </div>
+                            </div></div>
                         </template>
                     </div>
 
@@ -163,13 +164,13 @@
         </main>
 
         <footer>
-            <div id="conteudo_footer">
-                <div class="logotipo_frase">
+            <div id="conteudo_footer" class="row row-cols-1 row-cols-xl-3 justify-content-center g-4">
+                <div class="logotipo_frase col">
                     <img src="../imgs/Logotipo.png" alt="Logotipo" class="logotipo_footer">
                     <p class="frase_footer">Feito com amor e muito chocolate.</p>
                 </div>
 
-                <div class="categorias_links">
+                <div class="categorias_links col">
                     <h1>Cardápio</h1>
                     <ul>
                         <li><a href="cookie.html">Cookies</a></li>
@@ -179,7 +180,7 @@
                     </ul>
                 </div>
 
-                <div class="redessocias_footer">
+                <div class="redessocias_footer col">
                     <h1>Redes Sociais</h1>
                     <div class="redessocias">
                         <a href="contato.html#canais_comunicacao" class="whatsapp"><i class="bi bi-whatsapp" aria-hidden="true"></i>WhatsApp</a>

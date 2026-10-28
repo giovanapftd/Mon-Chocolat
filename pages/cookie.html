@@ -19,13 +19,15 @@
     
     <!-- Barra de Navegação Cookie -->
         <header>
-            <nav>
-                <div class="logotipo">
+            <nav class="navbar navbar-expand-lg px-3 px-lg-5 py-2">
+            <div class="container-fluid p-0 d-flex flex-wrap justify-content-center position-relative">
+                <div class="logotipo navbar-brand mx-auto">
                     <a href="inicio.html"> <img src="../imgs/Logotipo.png" alt="Logotipo da Mon Chocolat" class="img_logotipo"> </a>
                 </div>
 
-                <div class="lista_links">
-                    <ul>
+                <button class="navbar-toggler bg-light position-absolute end-0 top-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+                <div class="lista_links collapse navbar-collapse w-100 justify-content-center" id="menuPrincipal">
+                    <ul class="navbar-nav flex-column flex-lg-row align-items-center mx-auto gap-1 gap-lg-4">
                         <li><a href="inicio.html">Início</a></li>
                         <li><a href="cookie.html">Cookies</a></li>
                         <li><a href="brownie.html">Brownies</a></li>
@@ -34,7 +36,8 @@
                         <li><a href="contato.html">Contatos</a></li>
                     </ul>
                 </div>
-            </nav>
+                        </div>
+        </nav>
         </header>
 
         <main>
@@ -43,20 +46,19 @@
                     <h1>Cookies</h1>
                 </div>
 
-                <div class="cards-cardapio cards-cookies">
+                <div class="cards-cardapio row justify-content-start row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3 cards-cookies">
                     <template>
-                        <div class="card-cardapio">
+                        <div class="col"><div class="card-cardapio card d-flex flex-column">
                             <img src="" alt="" class="img-cardapio">
 
-                            <div class="conteudo-cardapio">
+                            <div class="conteudo-cardapio d-flex flex-column flex-grow-1 p-3 p-md-4">
                                 <h2 class="titulo-produto"></h2>
                                 <p class="descricao-produto"></p>
                                 <p class="preco-produto"></p>
 
                                 <a class="botao-comprar">Comprar</a>
                             </div>
-                        </div>
-
+                        </div></div>
                     </template>
                 </div>
 
@@ -65,13 +67,13 @@
         </main>
 
         <footer>
-            <div id="conteudo_footer">
-                <div class="logotipo_frase">
+            <div id="conteudo_footer" class="row row-cols-1 row-cols-xl-3 justify-content-center g-4">
+                <div class="logotipo_frase col">
                     <img src="../imgs/Logotipo.png" alt="Logotipo" class="logotipo_footer">
                     <p class="frase_footer">Feito com amor e muito chocolate.</p>
                 </div>
 
-                <div class="categorias_links">
+                <div class="categorias_links col">
                     <h1>Cardápio</h1>
                     <ul>
                         <li><a href="cookie.html">Cookies</a></li>
@@ -81,7 +83,7 @@
                     </ul>
                 </div>
 
-                <div class="redessocias_footer">
+                <div class="redessocias_footer col">
                     <h1>Redes Sociais</h1>
                     <div class="redessocias">
                         <a href="contato.html#canais_comunicacao" class="whatsapp"><i class="bi bi-whatsapp" aria-hidden="true"></i>WhatsApp</a>
@@ -98,5 +100,6 @@
                     <p class="direitos_reservados">© 2026 Mon Chocolat. Todos os direitos reservados.</p>
             </div>
         </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
